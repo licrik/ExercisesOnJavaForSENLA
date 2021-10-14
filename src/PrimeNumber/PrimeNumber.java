@@ -33,7 +33,6 @@ public class PrimeNumber {
                     FindPrimeNumbers(number / a);
                 } else {
                     _connector.SendMessage(a);
-
                 }
                 return;
             }

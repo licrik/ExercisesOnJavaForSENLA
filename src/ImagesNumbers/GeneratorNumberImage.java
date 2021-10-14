@@ -2,7 +2,7 @@ package ImagesNumbers;
 
 public class GeneratorNumberImage {
     private Image[] _image;
-    private int _position = -1;
+    private int _position = 0;
 
     private int _wight = 8;
     private int _height = 7;
@@ -21,7 +21,7 @@ public class GeneratorNumberImage {
     }
 
     public String[] GetStringImage() {
-        String[] str = new String[_height];
+        String[] str = CreateClearStringArray();
 
         for (int i = 0; i < _image.length; i++) {
 
@@ -32,5 +32,15 @@ public class GeneratorNumberImage {
         }
 
         return str;
+    }
+
+    private String[] CreateClearStringArray() {
+        String[] lines = new String[_height];
+
+        for (int i = 0; i < _height; i++) {
+            lines[i] = "";
+        }
+
+        return lines;
     }
 }

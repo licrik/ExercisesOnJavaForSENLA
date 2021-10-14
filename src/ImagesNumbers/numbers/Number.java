@@ -1,5 +1,6 @@
 package ImagesNumbers.numbers;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public abstract class Number {
@@ -33,11 +34,11 @@ public abstract class Number {
     }
 
     private char[][] CreateCharArray(char element) {
-        char[][] builder = new char[_wight][_height];
+        char[][] builder = CreateCleanArray();
 
         for (Coordinate coordinate:
                 _coordinates) {
-            builder[coordinate.x()][coordinate.y()] = element;
+            builder[coordinate.y()][coordinate.x()] = element;
         }
 
         return builder;
@@ -51,6 +52,15 @@ public abstract class Number {
         }
 
         return string_array;
+    }
+
+    private char[][] CreateCleanArray() {
+        char[][] chars = new char[_wight][_height];
+
+        for (int i = 0; i < _height; i++) {
+            Arrays.fill(chars[i], ' ');
+        }
+        return chars;
     }
 
     protected abstract void InitializeStringsLine();

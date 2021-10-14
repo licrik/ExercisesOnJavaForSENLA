@@ -29,11 +29,11 @@ public class NumberTwo extends Number {
         AddCoordinate(1, 4);
         AddCoordinate(0, 5);
 
-        AddCoordinate(0, 0);
-        AddCoordinate(1, 0);
-        AddCoordinate(2, 0);
-        AddCoordinate(3, 0);
-        AddCoordinate(4, 0);
+        AddCoordinate(0, 6);
+        AddCoordinate(1, 6);
+        AddCoordinate(2, 6);
+        AddCoordinate(3, 6);
+        AddCoordinate(4, 6);
     }
 
 }
